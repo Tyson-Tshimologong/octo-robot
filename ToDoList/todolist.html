@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>title</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!---------------------------------------------------------------Header Section------------------------------------------------- -->
     <header>
-        <h1>A To Do List</h1>
+      <h1>A To Do List</h1>
     </header>
     <!--------------------------------------------------------------Beginning of Form----------------------------------------------------- -->
     <form>
-        <input type="text" class="todo-input"/>
-        <button class="todo-button" type="submit">
+      <input type="text" class="todo-input" />
+      <button class="todo-button" type="submit">
         <i class="fas fa-plus-square"></i>
-        </button>
-        <div class="select">
-            <select name="todos" class="filter-todo">
-                <option value="all">All</option>
-                <option value="completed">Completed</option>
-                <option value="uncomplete">Uncompleted</option>
-            </select>
-        </div>
-    </form><br/>
+      </button>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncomplete">Uncompleted</option>
+        </select>
+      </div>
+    </form>
+    <br />
     <!---------------------------------------------------------------List Object being added Dynamically----------------------------------- -->
-    <div class="to-do-container">
-        <ul class="todo-list"></ul>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
     </div>
     <button class="back_btn">
-        <a href="../index.html" class="btn_text">Go Back</a>
+      <a href="../index.html" class="btn_text">Go Back</a>
     </button>
 
-    <script src="./app.js" ></script>
-
-</body>
-
+    <script src="./app.js"></script>
+  </body>
 </html>
