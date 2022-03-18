@@ -60,7 +60,10 @@ h2 {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
+.dots {
+  text-align: center;
+  margin-left: 10rem;
+}
 .active {
   background-color: orange;
 }
@@ -102,14 +105,15 @@ h2 {
   width: 600px;
   height: 400px;
   border: 0.1rem solid #8e829b;
-  margin-left: 10rem;
+  margin-left: 16rem;
+  margin-top: -12rem;
   border-radius: 2rem;
 }
 
 .back_btn {
   /* background-color: #0b2343; */
 
-  margin-left: 44rem;
+  margin-left: 50rem;
   margin-top: 3rem;
   padding: 1rem 1rem;
   border-radius: 0.5rem;
@@ -124,4 +128,48 @@ h2 {
 
 .btn_text:hover {
   color: orange;
+}
+
+.techies,
+.Atoms,
+.Dev {
+  width: 12rem;
+  height: 2rem;
+  background-color: red;
+  font-weight: bold;
+  font-size: x-large;
+  position: relative;
+  animation-name: teams;
+  animation-duration: 20s;
+  animation-iteration-count: 50;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+}
+
+@keyframes teams {
+  0% {
+    background-color: orange;
+    left: 0.63rem;
+    top: 0.63rem;
+  }
+  25% {
+    background-color: yellow;
+    left: 13.1rem;
+    top: 0.63rem;
+  }
+  50% {
+    background-color: blue;
+    left: 13.1rem;
+    top: 13.1rem;
+  }
+  75% {
+    background-color: green;
+    left: 0.63rem;
+    top: 13.1rem;
+  }
+  100% {
+    background-color: red;
+    left: 0.63rem;
+    top: 0.63rem;
+  }
 }

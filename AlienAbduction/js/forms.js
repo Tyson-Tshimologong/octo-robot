@@ -1,4 +1,4 @@
-var form = document.getElementsByTagName("form")[0];
+let form = document.getElementsByTagName("form")[0];
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   sendData();
@@ -6,9 +6,9 @@ form.addEventListener("submit", function (e) {
 
 // https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript
 function sendData() {
-  var XHR = new XMLHttpRequest();
-  var urlEncodedData = "";
-  var urlEncodedDataPairs = [];
+  let XHR = new XMLHttpRequest();
+  let urlEncodedData = "";
+  let urlEncodedDataPairs = [];
 
   urlEncodedDataPairs.push(
     encodeURIComponent("name") +
@@ -18,7 +18,7 @@ function sendData() {
   urlEncodedDataPairs.push(
     encodeURIComponent("send_to") +
       "=" +
-      encodeURIComponent(form.querySelector("[name='email']").value)
+      encodeURIComponent(form.querySelector("[name='send_to']").value)
   );
   urlEncodedDataPairs.push(
     encodeURIComponent("email") +
@@ -36,7 +36,7 @@ function sendData() {
       encodeURIComponent(form.querySelector("[name='requesteddate']").value)
   );
   urlEncodedDataPairs.push(
-    encodeURIComponent("quantitty") +
+    encodeURIComponent("qty") +
       "=" +
       encodeURIComponent(form.querySelector("[name='peopleno']").value)
   );
@@ -52,9 +52,9 @@ function sendData() {
   }
 
   // dropdown menu
-  var dropdown = form.querySelector("[name='experiencetype']");
+  let dropdown = form.querySelector("[name='experiencetype']");
   urlEncodedDataPairs.push(
-    encodeURIComponent("experiencetype") +
+    encodeURIComponent("abtype") +
       "=" +
       encodeURIComponent(dropdown.options[dropdown.selectedIndex].text)
   );
@@ -66,7 +66,7 @@ function sendData() {
   urlEncodedDataPairs.push(
     encodeURIComponent("subscribe") +
       "=" +
-      encodeURIComponent(form.querySelector("[name='specialrequest']").checked)
+      encodeURIComponent(form.querySelector("[name='subscribe']").checked)
   );
 
   // Combine the pairs into a single string and replace all %-encoded spaces to
@@ -97,5 +97,6 @@ function sendData() {
   XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
   // Finally, send our data.
+  console.log(urlEncodedData);
   XHR.send(urlEncodedData);
 }

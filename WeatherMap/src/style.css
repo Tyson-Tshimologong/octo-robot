@@ -112,7 +112,7 @@ nav h1 {
   margin: 0 0 0.5rem 0.5rem;
 }
 .back_btn {
-  /* background-color: #0b2343; */
+  background-color: #0b2343;
 
   margin-left: 40rem;
   padding: 1rem 1rem;
@@ -120,12 +120,12 @@ nav h1 {
 }
 
 .btn_text {
-  color: #0b2343;
+  color: #fff;
   text-decoration: none;
   font-size: medium;
   font-weight: bold;
 }
 
 .btn_text:hover {
-  color: #ffcc05;
+  font-size: large;
 }
